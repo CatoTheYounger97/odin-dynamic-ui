@@ -14,11 +14,51 @@
     sans-serif;
 }
 
-body {
-  background-color: navy;
+#content {
+  margin: auto;
+  max-width: 1000px;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 50px 200px 50px;
+  grid-template-rows: 200px;
+  justify-content: center;
 }
 
-.TemplateText {
-  color: red;
-  text-align: center;
+#frame {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+#slide-set {
+  height: 200px;
+  position: relative;
+
+  right: 0px;
+
+  transition-property: right;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+#nav-dots {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 5%;
+  left: 50%;
+}
+
+.Dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+img {
+  object-fit: contain;
 }
